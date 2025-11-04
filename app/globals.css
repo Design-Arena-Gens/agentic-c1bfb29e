@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0a0a;
+  --fg: #e5e7eb;
+  --muted: #9ca3af;
+  --silver: #c0c0c0;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Elegant silver button */
+.btn-silver {
+  @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold text-black transition-transform duration-200;
+  background: linear-gradient(180deg, #f8f9fa, #cfd3d6);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 8px 30px rgba(255,255,255,0.12);
+}
+.btn-silver:hover { transform: translateY(-1px); }
+.btn-silver:active { transform: translateY(0); }
+
+/* Subtle card with silver edge */
+.card-silver {
+  @apply rounded-xl bg-black/40 backdrop-blur-md border border-white/10 shadow-glow;
+}
+
+/* Divider */
+.hr-silver {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  height: 1px;
+  width: 100%;
+}
+
+/* Section padding */
+.section {
+  @apply py-20 md:py-28;
+}
+
+/* Gradient text utility */
+.text-silver-gradient {
+  background: linear-gradient(180deg, #ffffff, #c0c0c0 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
